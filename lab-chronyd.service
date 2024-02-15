@@ -1,0 +1,16 @@
+[Unit]
+Description=lab-chronyd ChronyD NTP Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStop=/opt/lab-chronyd/scripts/service_init.sh stop
+ExecStart=/opt/lab-chronyd/scripts/service_init.sh start
+ExecReload=/opt/lab-chronyd/scripts/service_init.sh restart
+
+TimeoutStartSec=30
+Type=forking
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
