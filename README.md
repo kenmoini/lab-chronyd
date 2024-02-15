@@ -3,6 +3,8 @@
 ## Installation
 
 ```bash
+cd /opt
+
 git clone https://github.com/kenmoini/lab-chronyd
 
 cd lab-chronyd

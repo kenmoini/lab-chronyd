@@ -2,6 +2,9 @@
 
 set -x
 
+RUNTIME="podman"
+#RUNTIME="crictl"
+
 CONTAINER_NAME="lab-chronyd"
 CONTAINER_VOLUME_ROOT="/opt/${CONTAINER_NAME}"
 CONTAINER_IMAGE="docker.io/publicarray/chrony:latest"
